@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="col-md-12 p-0 bg-dark">
+    <div class="container">
+        <div class="row m-0">
+
+            <div class="col-md-8 p-0 text-right">
+                <img class="w-100 h-50 contact-mt  img-h" src="{{ project.photo_main.url }}" alt="">
+            </div>
+            <div class="col-md-4 contact-mt  text-light  p-0 text-right">
+                <div class="card w-100 h-50  bg-dark img-h border-0">
+                    <div class="card-body mt-3 color-main">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+
+
+            </div>
+        
+    </div>
+
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12  text-center  my-3">
+                <h3 class="color-main">{{project.title}}</h3>
+                <p class="text-light">{{project.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section>
+    <div class="container">
+        <div class="col-md-12 my-4" >
+          <div class="row">
+
+             {% if project.photo_1 %} 
+            <div  class="col-lg-2">
+              <img src="{{project.photo_1.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_2 %} 
+            <div class="col-lg-2">
+                <img src="{{project.photo_2.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_3 %} 
+            <div class="col-lg-2">
+                <img src="{{project.photo_3.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_4 %} 
+            <div class="col-lg-2">
+                <img src="{{project.photo_4.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_5 %} 
+            <div class="col-lg-2">
+                <img src="{{project.photo_5.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_6 %} 
+            <div class="col-lg-2">
+                <img src="{{project.photo_6.url}}" width="250" height="250" alt="">
+            </div>
+            {% endif %}
+            {% if project.photo_7 %} 
+            <div  class="col-lg-2">
+                <img src="{{project.photo_7.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+              {% if project.photo_8 %} 
+              <div class="col-lg-2">
+                  <img src="{{project.photo_8.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+              {% if project.photo_9 %}
+              <div class="col-lg-2">
+                  <img src="{{project.photo_9.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+              {% if project.photo_10 %}
+              <div class="col-lg-2">
+                  <img src="{{project.photo_10.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+              {% if project.photo_11 %}
+              <div class="col-lg-2">
+                  <img src="{{project.photo_11.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+              {% if project.photo_12 %}
+              <div class="col-lg-2">
+                  <img src="{{project.photo_12.url}}" width="250" height="250" alt="">
+              </div>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+{% endblock %}

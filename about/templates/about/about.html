@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<header id="page-header" class="bg-dark text-white p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto text-center">
+        <h1 class="text-dark">About Us</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section id="about" class="py-3 bg-dark text-light">
+  <div class="container">
+    <hr />
+    <div class="row">
+      <div class="col-md-6 text-right">
+        <h1 class="text-secondary mb-5">{{about.title}}</h1>
+
+        <p>{{about.description}}</p>
+      </div>
+      <div class="col-md-6">
+
+        <img src="{{ about.image.url }}" alt="" class="about-img img-fluid profile-image " />
+      </div>
+    </div>
+    <hr />
+  </div>
+</section>
+
+{% endblock content %}

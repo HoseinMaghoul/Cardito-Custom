@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="col-md-12 p-0 bg-dark">
+    <div class="container">
+        <div class="row m-0">
+
+            <div class="col-md-8 p-0 text-right">
+                <img class="w-100 h-50 contact-mt  img-h" src="{{category.image.url}}" alt="">
+            </div>
+            <div class="col-md-4 contact-mt  text-light  p-0 text-right">
+                <div class="card w-100 h-50  bg-dark img-h border-0">
+                    <div class="card-body mt-3 color-main">
+                      This is some text within a card body.
+                    </div>
+                  </div>
+
+
+            </div>
+        
+    </div>
+
+</div>
+    <div class="container">
+        <div class="row">
+
+            {% for project in projects %}
+              <div class="col-md-4">
+                  <div class="car-wrap ftco-animate bg-project">
+
+                      <a href="#"><div class="img d-flex align-items-end" >
+                        <img class="img img-fluid" src="{{project.photo_main.url}}" alt="">
+                      </div></a>
+                      <div class="text p-4 text-center">
+                          <h2 class="mb-2 category-description"><a href="#">{{project.title}}</a></h2>
+                          <span class='text-light'>{{project.description}}</span>
+                          <a href="{% url 'projects:project' project.id %}" class="btn btn-black btn-block btn-outline-black ">More</a>
+                      </div>
+                  </div>
+                </div>
+          {% endfor %}
+
+
+              </div>
+    </div>
+</div>
+
+
+{% endblock %}
